@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+
+body {
+	font-size: 10pt;
+	color: blue;
+	padding: 50pt;
+}
+
+h1 {
+	font: 20pt Verdana, Arial, Helvetica,sans-serif;
+	font-weight: bold;
+	line-height: 24pt;
+}
+
+img {
+	padding: 20pt;
+}
+
+img.top {
+	float: left;
+}
+
+img.bottom {
+	float: right;
+}
+
+.bigpadding {
+	padding: 30pt;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link, a:visited {
+	color: red;
+}
+
+a:hover, a:active {
+	color: yellow;
+}
