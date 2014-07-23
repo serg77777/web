@@ -6,15 +6,6 @@
 
 <style type="text/css">
 
-p {
-	border-style: groove;
-	border-color: red;
-	border-width: 5pt;
-	color: blue;
-	background-color: yellow;
-	text-align: right;
-}
-
 </style>
 
 
@@ -22,13 +13,31 @@ p {
 </head>
 <body>
 
-	<p>Instances of classes implementing Composite must be immutable
-		because the Graphics2D does not clone these objects when they are set
-		as an attribute with the setComposite method or when the Graphics2D
-		object is cloned. This is to avoid undefined rendering behavior of
+	<p>Instances of <big>classes</big> implementing Composite must be immutable
+		<small>because</small> the Graphics2D does not clone these objects when they are set
+		as an attribute <sup>with</sup> the <sub>setComposite</sub> method or when the Graphics2D
+		object is cloned. <tt>This is to avoid</tt> undefined rendering behavior of
 		Graphics2D, resulting from the modification of the Composite object
 		after it has been set in the Graphics2D context.</p>
 
+<code>
+			try {
+				UserMapper mapper = session.getMapper(UserMapper.class);
+				
+				mapper.storeNewUser("zaal", "qwerty", "zaal@itcwin.com");
+				
+				List<User> userList = mapper.loadUsers();
+				for (User user : userList) {
+					System.out.println(user);
+				}
+				User john = mapper.loadUserByEmail("john@doe.com");
+				System.out.println(john);
+				
+				john = mapper.loadUserByNameAndPassword("John", "123");
+				System.out.println(john);
+
+
+</code>
 
 </body>
 </html>
